@@ -90,9 +90,8 @@ const Header = () => {
               display={{base:'flex',md:'flex',lg:'none'}}
               onClick={onOpen}
               fontSize={{base:'4.5vmax',md:'3.5vmax',lg:'1.5vmax'}}
-              border={'1px solid red'}
             />
-            <Box  border={'1px solid red'} display={{base:'block',md:'block',lg:'none'}} >
+            <Box  display={{base:'block',md:'block',lg:'none'}} >
                 <Image w={{base:'70%',md:'30%',lg:'10%'}} src={logo} alt="logo" />
             </Box>
         </HStack>
@@ -201,20 +200,20 @@ const Header = () => {
 
     <Drawer
         isOpen={isOpen}
-        placement='bottom'
+        placement='left'
         onClose={onClose}
         size={'full'}
       >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>Welcome to astrosoull</DrawerHeader>
 
           <DrawerBody>
        
-            <VStack w={'100%'} spacing={5} justifyContent={'space-evenly'} alignItems={'flex-start'}  >
-              <Text  w={'100%'} p={3} cursor={'pointer'} onClick={()=>closeMenuOnClick('/')} fontSize={'2.5vmax'} fontWeight={'600'}  children={'Home'} />
-              <Text  w={'100%'} p={3} cursor={'pointer'} onClick={()=>closeMenuOnClick('/consult')} fontSize={'2.5vmax'} fontWeight={'600'}  children={`Consult with Astrologer's`} />
+            <VStack w={'100%'} spacing={3} justifyContent={'space-evenly'} alignItems={'flex-start'}  >
+              <Text  w={'100%'} p={1} cursor={'pointer'} onClick={()=>closeMenuOnClick('/')} fontSize={'2.5vmax'} fontWeight={'600'}  children={'Home'} />
+              <Text  w={'100%'} p={1} cursor={'pointer'} onClick={()=>closeMenuOnClick('/consult')} fontSize={'2.5vmax'} fontWeight={'600'}  children={`Consult with Astrologer's`} />
          
 
               <Accordion  w={'100%'} allowToggle>
@@ -263,16 +262,16 @@ const Header = () => {
                 </AccordionItem>
               </Accordion>
 
-              <Text  w={'100%'} p={3} cursor={'pointer'} onClick={()=>closeMenuOnClick('/blog')} fontSize={'2.5vmax'} fontWeight={'600'}  children={'Blog'} />
-              <Text  w={'100%'} p={3} cursor={'pointer'} onClick={()=>closeMenuOnClick('/contactus')} fontSize={'2.5vmax'} fontWeight={'600'}  children={'Contact Us'} />
+              <Text  w={'100%'} p={1} cursor={'pointer'} onClick={()=>closeMenuOnClick('/blog')} fontSize={'2.5vmax'} fontWeight={'600'}  children={'Blog'} />
+              <Text  w={'100%'} p={1} cursor={'pointer'} onClick={()=>closeMenuOnClick('/contactus')} fontSize={'2.5vmax'} fontWeight={'600'}  children={'Contact Us'} />
             </VStack>
             
           </DrawerBody>
 
           <DrawerFooter>
               <HStack w={'100%'} justifyContent={'space-evenly'} alignItems={'center'} >
-                <Button size={'lg'} children={'Login'} colorScheme={'whatsapp'} />
-                <Button size={'lg'} children={'SignUp'} colorScheme={'whatsapp'} />
+                <Button onClick={()=>closeMenuOnClick('/login')}  size={'lg'} children={'Login'} colorScheme={'whatsapp'} />
+                <Button onClick={()=>closeMenuOnClick('/signup')}  size={'lg'} children={'SignUp'} colorScheme={'whatsapp'} />
               </HStack>
           </DrawerFooter>
         </DrawerContent>

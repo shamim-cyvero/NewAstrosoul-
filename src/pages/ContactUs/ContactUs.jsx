@@ -32,19 +32,19 @@ const ContactUs = () => {
       title: "Address",
       bgGradient: "linear(135deg, #3C8CE7 10%, #00EAFF 100%)",
       details:
-        "Ext, Sch no 54, Vikram Urbane, 312, 25 A, Mechanic Nagar, Indore, Madhya Pradesh 452010",
+        "35, 1st floor Bharat Nagar Ashok Vihar Ph. 4 Delhi – 110052",
     },
     {
       icon: IoCallOutline,
       title: "Phone",
       bgGradient: "linear(135deg, #11c99c, #00e31d)",
-      details: "+91 (1234567890)",
+      details: "+91 (9910444896)",
     },
     {
       icon: AiOutlineMail,
       title: "Email",
       bgGradient: "linear(135deg, #ff0844 0%, #ffb199 100%)",
-      details: "info@gmail.com",
+      details: "soullastro@gmail.com",
     },
   ];
 
