@@ -1,0 +1,110 @@
+import React from 'react'
+import astro1 from "../../assets/astrologerImg/astro1.jpg";
+import astro2 from "../../assets/astrologerImg/astro2.jpg";
+import astro3 from "../../assets/astrologerImg/astro3.jpg";
+import astro4 from "../../assets/astrologerImg/astro4.jpg";
+import astro5 from "../../assets/astrologerImg/astro5.jpg";
+import astro6 from "../../assets/astrologerImg/astro6.jpg";
+import astro7 from "../../assets/astrologerImg/astro7.jpg";
+import astro8 from "../../assets/astrologerImg/astro8.jpg";
+import { Avatar, AvatarBadge, Button, Heading, HStack, Stack, Text, VStack,Tab, TabList, TabPanel, TabPanels, Tabs, ListItem, List, ListIcon } from "@chakra-ui/react";
+import { MdCheckCircle } from 'react-icons/md';
+import Rating  from 'react-rating'
+import { FaStar } from "react-icons/fa";
+
+const UserInstructorsProfile = () => {
+
+  const singleProfile = {
+    image: astro1,
+    astroName: "Abhay Sharma",
+    Specialist:'Astrology | Vastu Specialist',
+    exp: "Astrology Hindi,English Exp: 5+ Year",
+    rating: "star",
+    totalRating: "4.5",
+    appointment: "Book a Consultation",
+  };
+
+  return (
+    <>
+        <Stack bgColor={'white'} borderRadius={'10px'} boxShadow='lg' spacing={'10'} border={'1px solid red'} w={'80%'} p={'6'} m={'1.5vmax auto'} alignItems={'center'} justifyContent={'flex-start'} direction={{base:'column',md:'row',lg:'row'}}>
+            <Avatar border={'1px solid red'} w={'15vmax'} h={'15vmax'} src={singleProfile.image} name={singleProfile.astroName} >
+              {/* <AvatarBadge  bg='tomato' boxSize='.9em' /> */}
+            </Avatar>
+
+            <VStack p={2} spacing={'1'} border={'1px solid red'} alignItems={'flex-start'} >
+                <Heading letterSpacing={'4px'}  fontSize={'3xl'} children={singleProfile.astroName} />
+                <Text children={singleProfile.Specialist} />
+                <HStack >
+                    {/* <Rating
+                      emptySymbol={<FaStar color='gray' />}
+                      fullSymbol={<FaStar color='red' />}
+                      /> */}
+                    <Rating
+                      emptySymbol={<FaStar color='gray' />}
+                      fullSymbol={<FaStar color='tomato' />}
+                      initialRating={singleProfile.totalRating}
+                      readonly
+                    />
+                    <Button size={'sm'} colorScheme={'whatsapp'} children={singleProfile.totalRating} />
+                </HStack>
+                <Text children={'₹50 / Min'} />
+
+            </VStack>
+        </Stack>
+
+        {/* tabs start */}
+        <Tabs w={'80%'} m={'1vmax auto'}  size='md' >
+        <TabList p={'4'}>
+          <Tab _selected={{borderBottom:'3px solid green' }} mr={'2vmax'}>About</Tab>
+          <Tab _selected={{borderBottom:'3px solid green' }}>Book a Consultation</Tab>
+        </TabList>
+
+        <TabPanels >
+
+          <TabPanel p={'4'}>
+            <VStack mb={'2vmax'} border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
+              <Heading m={'1vmax 0'} fontSize={'xl'} children={singleProfile.astroName} />
+              <List spacing={1}>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color='green.500' />
+                    Associate in Physical Therapy from University of British Columbia
+                </ListItem>   
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  Bachelor of Arts in Psychology from Duke University
+                </ListItem>     
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  Master of Public Health from Cornell University
+                </ListItem>            
+              </List>
+            </VStack>
+            <VStack border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
+              <Heading m={'1vmax 0'} fontSize={'xl'} children={singleProfile.astroName} />
+              <Text children={`
+                Mr. Narendra Umrikar, a globally recognized Indian Vaastu Astrologer with 6+ years of expertise. 
+                His journey commenced at Asttrolok, and through dedication and study, he obtained an M.Phil in Vaastu Shastra.
+                Now, with over 16 years of experience, he's a cornerstone in the field and a member of the Institute of 
+                Vedic Vaastu & Research Foundation, Indore.
+                `} 
+              />
+
+            </VStack>
+          </TabPanel>
+
+          <TabPanel p={'4'}>
+            <VStack justifyContent={'center'} alignItems={'center'} >
+              <Text children={`
+                  Instructor is not available for meetings...
+                `} 
+              />
+            </VStack>
+          </TabPanel>
+
+        </TabPanels>
+      </Tabs>
+    </>
+  )
+}
+
+export default UserInstructorsProfile

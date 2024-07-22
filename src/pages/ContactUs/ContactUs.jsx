@@ -1,0 +1,162 @@
+import {
+  Box,
+  Icon,
+  Img,
+  HStack,
+  Image,
+  Stack,
+  Text,
+  VStack,
+  Input,
+  Textarea,
+  Button,
+} from "@chakra-ui/react";
+import React from "react";
+import img from "../../assets/contactUsImg/astrologybanner.png";
+// import img from "../../assets/contactUsImg/img.jpg";
+import SimpleCard from "../../components/SimpleCard/SimpleCard";
+
+import course from "../../assets/courseCardImg/Online.jpg";
+import consult from "../../assets/courseCardImg/Consultation.jpg";
+import per from "../../assets/courseCardImg/per.jpg";
+
+import { CiLocationOn } from "react-icons/ci";
+import { IoCallOutline } from "react-icons/io5";
+import { AiOutlineMail } from "react-icons/ai";
+
+const ContactUs = () => {
+
+  const cousreCardData = [
+    {
+      icon: CiLocationOn,
+      title: "Address",
+      bgGradient: "linear(135deg, #3C8CE7 10%, #00EAFF 100%)",
+      details:
+        "Ext, Sch no 54, Vikram Urbane, 312, 25 A, Mechanic Nagar, Indore, Madhya Pradesh 452010",
+    },
+    {
+      icon: IoCallOutline,
+      title: "Phone",
+      bgGradient: "linear(135deg, #11c99c, #00e31d)",
+      details: "+91 (1234567890)",
+    },
+    {
+      icon: AiOutlineMail,
+      title: "Email",
+      bgGradient: "linear(135deg, #ff0844 0%, #ffb199 100%)",
+      details: "info@gmail.com",
+    },
+  ];
+
+  return (
+    <>
+      <Box  w={"100%"}  >
+        {/* <Img src={img} alt="img" w={"90%"} h={'50%'} objectFit={"cover"} /> */}
+        <Image src={img} alt={'img'} w={'100%'} h={{ base: '20vh', md: '40vh', lg: '65vh' }} objectFit={'cover'} />
+
+      </Box>
+
+      {/* <SimpleCard cousreCardData={cousreCardData} /> */}
+      <HStack
+        w={"90%"}
+        m={"40px auto"}
+        // border={"1px solid red"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        flexWrap={"wrap"}
+        spacing={8}
+      >
+        {cousreCardData &&
+          cousreCardData.map((item) => (
+            <Box
+              w={{ base: "700px", md: "350px" }}
+              h={{ base: "220px", md: "200px" }}
+              borderRadius={"15px"}
+              p={"20px 0"}
+              // border={"1px solid blackAlpha.200"}
+              boxShadow={"0 3px 10px rgb(0 0 0 / 0.4)"}
+              cursor={"pointer"}
+              //  boxShadow='lg' rounded='md' bg='white'
+              // transition="transform all 0.5s"
+              //  transition="transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out"
+              transition="all 0.3s "
+              _hover={{
+                transform: "translateY(-15px)",
+                bgColor: "#213b63",
+                color: "white",
+              }}
+            >
+              <VStack
+                w={"100%"}
+                h={"100%"}
+                justifyContent={"center"}
+                alignItems={"center"}
+              >
+                <HStack
+                  rounded={"20%"}
+                  bgGradient={item.bgGradient}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  p={5}
+                >
+                  <Icon as={item.icon} boxSize={"3vmax"} color={"white"} />
+                </HStack>
+                <Text
+                  children={item.title}
+                  //   w={["100%", "35%"]}
+                  textAlign={"center"}
+                  fontSize={["1.5rem", "1.2rem"]}
+                  fontWeight={"700"}
+                />
+                <Text
+                  children={item.details}
+                  //   w={["100%", "35%"]}
+                  textAlign={"center"}
+                  fontSize={["1rem", ".9rem"]}
+                  fontWeight={"400"}
+                  p={1}
+                />
+              </VStack>
+            </Box>
+          ))}
+      </HStack>
+
+      {/* conatac from */}
+      <VStack   w={'90%'} m={'1vmax auto'} alignItems={'flex-start'} >
+        <Text children={'Send your message directly'} />
+        <form style={{width:"100%"}} >
+          <Stack mb={'1vmax'} spacing={6} direction={{base:'column',md:'column',lg:'row'}} w={'100%'}  justifyContent={'space-between'}>
+            <VStack alignItems={'flex-start'}  w={{base:'100%',md:'100%',lg:'45%'}}>
+                <Text children={'Your name*'} />
+                <Input required focusBorderColor='green.400' border={'1px solid gray'} type="text"  />              
+            </VStack>
+            <VStack  alignItems={'flex-start'}  w={{base:'100%',md:'100%',lg:'45%'}}>
+                <Text children={'Email*'} />
+                <Input required focusBorderColor='green.400' border={'1px solid gray'} type="email"  />              
+            </VStack>
+          </Stack>
+
+          <Stack mb={'1.5vmax'} spacing={6} direction={{base:'column',md:'column',lg:'row'}} w={'100%'}  justifyContent={'space-between'}>
+            <VStack alignItems={'flex-start'}  w={{base:'100%',md:'100%',lg:'45%'}}>
+                <Text children={'Phone**'} />
+                <Input required focusBorderColor='green.400' border={'1px solid gray'} type="number"  />              
+            </VStack>
+            <VStack  alignItems={'flex-start'}  w={{base:'100%',md:'100%',lg:'45%'}}>
+                <Text children={'Subject*'} />
+                <Input required focusBorderColor='green.400' border={'1px solid gray'} type="text"  />              
+            </VStack>
+          </Stack>
+
+          <VStack   alignItems={'flex-start'} >
+            <Text children={'Message'} />
+            <Textarea focusBorderColor='green.400' />
+          </VStack>
+
+          <Button m={'1vmax 0'} type={'submit'} size={'lg'} children={'Send Message'} colorScheme={'whatsapp'} />
+        </form>
+      </VStack>
+    </>
+  );
+};
+
+export default ContactUs;
