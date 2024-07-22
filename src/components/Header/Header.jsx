@@ -202,7 +202,6 @@ const Header = () => {
         isOpen={isOpen}
         placement='left'
         onClose={onClose}
-        size={'full'}
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -268,7 +267,7 @@ const Header = () => {
             
           </DrawerBody>
 
-          <DrawerFooter>
+          <DrawerFooter m={'10vmax 0'} >
               <HStack w={'100%'} justifyContent={'space-evenly'} alignItems={'center'} >
                 <Button onClick={()=>closeMenuOnClick('/login')}  size={'lg'} children={'Login'} colorScheme={'whatsapp'} />
                 <Button onClick={()=>closeMenuOnClick('/signup')}  size={'lg'} children={'SignUp'} colorScheme={'whatsapp'} />
