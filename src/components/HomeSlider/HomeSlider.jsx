@@ -21,15 +21,15 @@ const HomeSlider = () => {
     };
 
     const SlideData = [
-        // {
-        //     heading: 'Solution for Every Aspect of Life',
-        //     text: ' Step into the world of vedic wisdom!',
-        //     smallText: 'Let our guidance shape your journey to a purposeful life',
-        //     button: '  Know more',
-        //     image: guru,
-        //     bg: '#edf8f4',
-        //     btnClr: 'whatsapp'
-        // },
+        {
+            heading: 'Solution for Every Aspect of Life',
+            text: ' Step into the world of vedic wisdom!',
+            smallText: 'Let our guidance shape your journey to a purposeful life',
+            button: '  Know more',
+            image: guru,
+            bg: '#edf8f4',
+            btnClr: 'whatsapp'
+        },
         {
             heading: `Consult with Our Expert Astrologer's for`,
             text: 'Personalized Insights!',
@@ -39,15 +39,15 @@ const HomeSlider = () => {
             bg: '#f5e9cf',
             btnClr: ' #a96f21'
         },
-        {
-            heading: 'Discover the Power of Personalized kundli',
-            text: ' Superboost your destiny!',
-            smallText: 'With complate 10-year prediction report',
-            button: ' Buy now',
-            image: kundli,
-            bg: '#d3e8ff',
-            btnClr: 'whatsapp'
-        },
+        // {
+        //     heading: 'Discover the Power of Personalized kundli',
+        //     text: ' Superboost your destiny!',
+        //     smallText: 'With complate 10-year prediction report',
+        //     button: ' Buy now',
+        //     image: kundli,
+        //     bg: '#d3e8ff',
+        //     btnClr: 'whatsapp'
+        // },
     ]
     return (
         <Box  w={{ base:'98%',md:'97%',lg:'95%'}} m={'1.5vmax auto'} >

@@ -122,7 +122,7 @@ const Header = () => {
       </HStack>
 
     {/* nav two */}
-    <Box boxShadow={'lg'} bgColor={'#edf8f4'} w={'100%'}  >
+    <Box boxShadow={'lg'} bgColor={'#edf8f4'} w={'100%'} pos={'sticky'} top={'0'} zIndex={'10'} p={'1vmax'} >
 
    
     <HStack display={{base:'none',md:'none',lg:'flex'}} bgColor={'#edf8f4'} p={'2'} w={'80%'} m={'0 auto'}  justifyContent={'space-between'} >

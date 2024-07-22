@@ -1,9 +1,9 @@
 import React from "react";
 import './Blog.css'
 import blog1 from "../../assets/blogImg/blog1.jpg";
-import blog2 from "../../assets/blogImg/blog2.jpg";
-import blog3 from "../../assets/blogImg/blog3.jpg";
-import blog4 from "../../assets/blogImg/blog4.jpg";
+import blog2 from "../../assets/blogImg/blog2.webp";
+import blog3 from "../../assets/blogImg/blog3.webp";
+import blog4 from "../../assets/blogImg/blog4.webp";
 import { FiUser } from "react-icons/fi";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { Box, Button, Card, CardBody, CardFooter, Divider, Heading, HStack, IconButton, Image, Stack, Text, VStack, } from "@chakra-ui/react";

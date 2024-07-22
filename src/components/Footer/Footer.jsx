@@ -67,7 +67,7 @@ const Footer = () => {
             <Text
               fontSize={["1.3rem", "1rem", ".9rem"]}
               mt={"20px"}
-              children={`Welcome to astrosoull.,
+              children={`Welcome to astrosoull,
                 recognized among india's top 3 astrology institutes,offering courses in astrology,numerlogy,plamistry,vastu & ayurveda
                 .Our goal:guide to englightenment,share wisdom globally.`}
             />

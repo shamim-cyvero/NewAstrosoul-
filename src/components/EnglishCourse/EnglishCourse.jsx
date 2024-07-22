@@ -1,8 +1,8 @@
 import { Avatar, Box, Button, Heading, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import Slider from 'react-slick';
-// import teacher from '../../assets/HindiCourseImg/rahul_verma.png';
-import teacher from '../../assets/HindiCourseImg/Alok.jpg';
+import teacher from '../../assets/HindiCourseImg/rahul_verma.png';
+// import teacher from '../../assets/HindiCourseImg/Alok.jpg';
 import slide1 from '../../assets/EnglishCourseImg/e1.jpg'
 import slide2 from '../../assets/EnglishCourseImg/e2.jpg'
 import slide3 from '../../assets/EnglishCourseImg/e3.jpg'
@@ -60,7 +60,7 @@ const EnglishCourse = () => {
         {
             offer: 25,
             image: slide1,
-            name: 'Astromani 2024',
+            name: 'Astrology',
             category: 'in Astrology',
             rating: 'rting',
             totalRating: '4.5',
@@ -73,7 +73,7 @@ const EnglishCourse = () => {
         {
             offer: 25,
             image: slide2,
-            name: 'Astromani Intermediate Level',
+            name: 'Astrology Intermediate Level',
             category: 'in Astrology',
             rating: 'rting',
             totalRating: '4.5',
@@ -86,7 +86,7 @@ const EnglishCourse = () => {
         {
             offer: 25,
             image: slide3,
-            name: 'Astromani Advanced Level',
+            name: 'Astrology Advanced Level',
             category: 'in Astrology',
             rating: 'rting',
             totalRating: '4.5',

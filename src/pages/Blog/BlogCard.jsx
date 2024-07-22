@@ -20,7 +20,7 @@ const BlogCard = ({ image, title, des }) => {
         <CardFooter  w="100%" alignItems="center" justifyContent="space-between" p={0}>
           <HStack  w="100%" alignItems="center" justifyContent="space-between" p={0} >
             <Button variant="ghost" leftIcon={<FiUser />}>
-              Asttrolok
+            astrosoull
             </Button>
             <Button variant="ghost" leftIcon={<FaRegCommentAlt />}>
               0
