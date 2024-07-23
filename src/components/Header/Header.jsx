@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <>
     {/* nav one */}
-      <HStack boxShadow={'lg'} p={'2'} w={{base:'100%',md:'80%',lg:'80%'}} m={'0 auto'}  justifyContent={'space-between'} >
+      {/* <HStack boxShadow={'lg'} p={'2'} w={{base:'100%',md:'80%',lg:'80%'}} m={'0 auto'}  justifyContent={'space-between'} >
         <HStack  w={{base:'60%',md:'40%',lg:'30%'}} justifyContent={'space-between'} >
             <HStack display={{base:'none',md:'none',lg:'flex'}} justifyContent={'space-between'}  >
               <Menu  w={'50%'}>
@@ -70,7 +70,6 @@ const Header = () => {
                 </MenuButton>
                 <MenuList>
                   <MenuItem onClick={()=>setCurrency('INR')} borderLeft={currency==='INR'?'2px solid green':''} >₹  India Rupee</MenuItem>
-                  {/* <MenuItem onClick={()=>setCurrency('USD')} borderLeft={currency==='USD'?'2px solid green':''}>$  United States Doll</MenuItem>         */}
                 </MenuList>
               </Menu>
 
@@ -98,13 +97,11 @@ const Header = () => {
 
         <HStack  w={{base:'35%',md:'30%',lg:'20%'}} justifyContent={{base:'flex-end',md:'space-between'}} alignItems={'center'}  >
           <Box >
-            {/* <BsCart2 boxSize={10} /> */}
             <Icon as={BsCart2} boxSize={{base:6,md:7,lg:5}} />
           </Box>
          
           <Box    >
           <Icon as={FaRegBell} boxSize={{base:6,md:7,lg:5}} />
-            {/* <FaRegBell  boxSize={10} /> */}
           </Box>
           <Button onClick={()=>navigate('/login')}  display={{base:'none',md:'none',lg:'block'}} textDecorationStyle={'none'} color={'black'} textDecorationLine={'none'} variant={"link"} children={"Login"} />
           <Button onClick={()=>navigate('/signup')}  display={{base:'none',md:'none',lg:'block'}} textDecorationStyle={'none'} color={'black'} textDecorationLine={'none'} variant={"link"} children={"Register"} />
@@ -119,13 +116,13 @@ const Header = () => {
             />
       
         </HStack>
-      </HStack>
+      </HStack> */}
 
     {/* nav two */}
     <Box boxShadow={'lg'} bgColor={'#edf8f4'} w={'100%'} pos={'sticky'} top={'0'} zIndex={'10'} p={'1vmax'} >
 
    
-    <HStack display={{base:'none',md:'none',lg:'flex'}} bgColor={'#edf8f4'} p={'2'} w={'80%'} m={'0 auto'}  justifyContent={'space-between'} >
+    <HStack display={{base:'none',md:'none',lg:'flex'}} bgColor={'#edf8f4'} p={'2'} w={'90%'} m={'0 auto'}  justifyContent={'space-between'} >
         <Box   w={'20%'}  >
             <Image w={'100%'} src={logo} alt="logo" />
         </Box>
@@ -190,6 +187,7 @@ const Header = () => {
             </Menu>
             <Text cursor={'pointer'} onClick={()=>navigate('/blog')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Blog'} />
             <Text cursor={'pointer'} onClick={()=>navigate('/contactus')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Contact Us'} />
+            <Text cursor={'pointer'} onClick={()=>navigate('/login')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Login'} />
         </HStack>
         <IconButton isRound={true} variant='solid' colorScheme='whatsapp' fontSize='20px' icon={<IoCallOutline />} />
     </HStack>

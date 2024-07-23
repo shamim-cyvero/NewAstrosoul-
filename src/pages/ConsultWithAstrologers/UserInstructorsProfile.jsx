@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import astro1 from "../../assets/astrologerImg/astro1.jpg";
 import astro2 from "../../assets/astrologerImg/astro2.jpg";
 import astro3 from "../../assets/astrologerImg/astro3.jpg";
@@ -11,8 +11,15 @@ import { Avatar, AvatarBadge, Button, Heading, HStack, Stack, Text, VStack,Tab, 
 import { MdCheckCircle } from 'react-icons/md';
 import Rating  from 'react-rating'
 import { FaStar } from "react-icons/fa";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import './UserInstructorsProfile.css'
 
 const UserInstructorsProfile = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+  
+  
 
   const singleProfile = {
     image: astro1,
@@ -56,14 +63,14 @@ const UserInstructorsProfile = () => {
         <Tabs w={'80%'} m={'1vmax auto'}  size='md' >
         <TabList p={'4'}>
           <Tab _selected={{borderBottom:'3px solid green' }} mr={'2vmax'}>About</Tab>
-          <Tab _selected={{borderBottom:'3px solid green' }}>Book a Consultation</Tab>
+          <Tab _selected={{borderBottom:'3px solid green' }}>More Details</Tab>
         </TabList>
 
         <TabPanels >
 
           <TabPanel p={'4'}>
             <VStack mb={'2vmax'} border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
-              <Heading m={'1vmax 0'} fontSize={'xl'} children={singleProfile.astroName} />
+              <Heading m={'1vmax 0'} fontSize={'xl'} children={'Education'} />
               <List spacing={1}>
                 <ListItem>
                   <ListIcon as={MdCheckCircle} color='green.500' />
@@ -79,8 +86,19 @@ const UserInstructorsProfile = () => {
                 </ListItem>            
               </List>
             </VStack>
+
+            <VStack mb={'2vmax'} border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
+              <Heading m={'1vmax 0'} fontSize={'xl'} children={'Experiences'} />
+              <List spacing={1}>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  10 years of experience working with astrolok
+                </ListItem>             
+              </List>
+            </VStack>
+
             <VStack border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
-              <Heading m={'1vmax 0'} fontSize={'xl'} children={singleProfile.astroName} />
+              <Heading m={'1vmax 0'} fontSize={'xl'} children={'About'} />
               <Text children={`
                 Mr. Narendra Umrikar, a globally recognized Indian Vaastu Astrologer with 6+ years of expertise. 
                 His journey commenced at Asttrolok, and through dedication and study, he obtained an M.Phil in Vaastu Shastra.
@@ -92,12 +110,28 @@ const UserInstructorsProfile = () => {
             </VStack>
           </TabPanel>
 
+
+
           <TabPanel p={'4'}>
             <VStack justifyContent={'center'} alignItems={'center'} >
               <Text children={`
                   Instructor is not available for meetings...
                 `} 
               />
+              {/*            
+
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                startDate={startDate}
+                endDate={endDate}
+                minDate={new Date()} // Disable past dates
+                inline
+                showDisabledMonthNavigation
+                withPortal
+                
+              /> */}
+
             </VStack>
           </TabPanel>
 

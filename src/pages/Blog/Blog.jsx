@@ -2,7 +2,7 @@ import { Box, Button, Heading, HStack, Image, Stack, Text, VStack } from '@chakr
 import React from 'react'
 import './Blog.css'
 // import blogBanner from '../../assets/BlogPageImg/blogpic.jpg'
-import blogBanner from '../../assets/BlogPageImg/top.webp'
+import blogBanner from '../../assets/BlogPageImg/top.png'
 import pic1 from '../../assets/BlogPageImg/blog1.jpg'
 import pic2 from '../../assets/BlogPageImg/blog2.webp'
 import pic3 from '../../assets/BlogPageImg/blog3.webp'

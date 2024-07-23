@@ -26,6 +26,7 @@ const BlogCard = ({ image, title, des }) => {
               0
             </Button>
           </HStack>
+          
         </CardFooter>
       </Card>
   </>
