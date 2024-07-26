@@ -61,15 +61,16 @@ const Header = () => {
   return (
     <>
     {/* nav one */}
-      {/* <HStack boxShadow={'lg'} p={'2'} w={{base:'100%',md:'80%',lg:'80%'}} m={'0 auto'}  justifyContent={'space-between'} >
+      <HStack boxShadow={'lg'} p={'2'} w={{base:'100%',md:'80%',lg:'80%'}} m={'0 auto'}  justifyContent={'space-between'} >
         <HStack  w={{base:'60%',md:'40%',lg:'30%'}} justifyContent={'space-between'} >
             <HStack display={{base:'none',md:'none',lg:'flex'}} justifyContent={'space-between'}  >
               <Menu  w={'50%'}>
                 <MenuButton fontWeight={'400'} fontSize={'1vmax'} as={Button} variant={'Link'} rightIcon={<IoIosArrowDown />}>
                   {currency && currency==='INR'?`₹ ${currency}`:`$ ${currency}`}
                 </MenuButton>
-                <MenuList>
+                <MenuList zIndex={'20'}>
                   <MenuItem onClick={()=>setCurrency('INR')} borderLeft={currency==='INR'?'2px solid green':''} >₹  India Rupee</MenuItem>
+                  <MenuItem onClick={()=>setCurrency('USD')} borderLeft={currency==='USD'?'2px solid green':''} >$ United States Dollar</MenuItem>
                 </MenuList>
               </Menu>
 
@@ -116,7 +117,7 @@ const Header = () => {
             />
       
         </HStack>
-      </HStack> */}
+      </HStack>
 
     {/* nav two */}
     <Box boxShadow={'lg'} bgColor={'#edf8f4'} w={'100%'} pos={'sticky'} top={'0'} zIndex={'10'} p={'1vmax'} >
@@ -187,7 +188,7 @@ const Header = () => {
             </Menu>
             <Text cursor={'pointer'} onClick={()=>navigate('/blog')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Blog'} />
             <Text cursor={'pointer'} onClick={()=>navigate('/contactus')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Contact Us'} />
-            <Text cursor={'pointer'} onClick={()=>navigate('/login')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Login'} />
+            {/* <Text cursor={'pointer'} onClick={()=>navigate('/login')} fontSize={'1.3vmax'} fontWeight={'600'}  children={'Login'} /> */}
         </HStack>
         <IconButton isRound={true} variant='solid' colorScheme='whatsapp' fontSize='20px' icon={<IoCallOutline />} />
     </HStack>

@@ -14,6 +14,8 @@ import Login from "./pages/User/Login/Login";
 import SignUp from "./pages/User/SignUp/SignUp";
 import UserAstrologersProfile from "./pages/ConsultWithAstrologers/UserAstrologersProfile";
 import UserInstructorsProfile from "./pages/ConsultWithAstrologers/UserInstructorsProfile";
+import AstrologerLogin from "./pages/Astrologer/AstrologerLogin/AstrologerLogin";
+import AstrologerSignup from "./pages/Astrologer/AstrologerSignUp/AstrologerSignup";
 
 function App() {
   return (
@@ -22,11 +24,16 @@ function App() {
         <Header />
         <Routes>
           <Route path={"/"} element={<Home />} />
-          <Route path={"/contactus"} element={<ContactUs />} />
-          <Route path={"/blog"} element={<Blog />} />
+          <Route path={"contactus"} element={<ContactUs />} />
+          <Route path={"blog"} element={<Blog />} />
           <Route path={"consult"} element={<ConsultWithAstrologers />} />
+
           <Route path={"login"} element={<Login />} />
           <Route path={"signup"} element={<SignUp />} />
+
+          <Route path={"astrologerlogin"} element={<AstrologerLogin />} />
+          <Route path={"astrologersignup"} element={<AstrologerSignup />} />
+
           <Route path={"UserAstrologersProfile"} element={<UserAstrologersProfile />} />
           <Route path={"UserInstructorsProfile"} element={<UserInstructorsProfile />} />
         </Routes>

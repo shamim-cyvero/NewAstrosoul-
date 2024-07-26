@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import astro1 from "../../assets/astrologerImg/astro1.jpg";
-import astro2 from "../../assets/astrologerImg/astro2.jpg";
-import astro3 from "../../assets/astrologerImg/astro3.jpg";
-import astro4 from "../../assets/astrologerImg/astro4.jpg";
-import astro5 from "../../assets/astrologerImg/astro5.jpg";
-import astro6 from "../../assets/astrologerImg/astro6.jpg";
-import astro7 from "../../assets/astrologerImg/astro7.jpg";
-import astro8 from "../../assets/astrologerImg/astro8.jpg";
+import astro1 from "../../assets/astrologerImg/astro1.png";
+import astro2 from "../../assets/astrologerImg/astro2.png";
+import astro3 from "../../assets/astrologerImg/astro3.png";
+import astro4 from "../../assets/astrologerImg/astro4.png";
+import astro5 from "../../assets/astrologerImg/astro5.png";
+import astro6 from "../../assets/astrologerImg/astro6.png";
+import astro7 from "../../assets/astrologerImg/astro7.png";
+import astro8 from "../../assets/astrologerImg/astro8.png";
 import { Avatar, AvatarBadge, Button, Heading, HStack, Stack, Text, VStack,Tab, TabList, TabPanel, TabPanels, Tabs, ListItem, List, ListIcon } from "@chakra-ui/react";
 import { MdCheckCircle } from 'react-icons/md';
 import Rating  from 'react-rating'

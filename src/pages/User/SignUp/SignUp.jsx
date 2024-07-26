@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import pic from '../../../assets/signUpImg.png'
 import { Box, Button, Checkbox, FormControl, FormLabel, Heading, HStack, Image, Input, Select, Stack, Text, VStack } from '@chakra-ui/react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
     const [name, setName] = useState("")
@@ -9,6 +9,9 @@ const SignUp = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
+
+  const navigate=useNavigate()
+
 
     const formSubmit = (e) => {
         e.preventDefault()
@@ -19,6 +22,7 @@ const SignUp = () => {
         console.log(confirmPassword)
 
     }
+
     return (
         <>
             <Stack w={'90%'} m={'40px auto'} alignItems={'center'} justifyContent={'center'} direction={{ base: 'column', md: 'column', lg: 'row' }}>
@@ -76,6 +80,9 @@ const SignUp = () => {
                             </VStack>
 
                             <Text textAlign={'center'} mt={'15px'} fontWeight={'400'} fontSize={['1.2rem','1.1rem','.9rem']}>Already have an account? <NavLink to={'/login'} color={'green'} fontWeight={'900'} fontSize={['1.2rem','1.1rem','.9rem']}>Login</NavLink></Text>
+                            <HStack m={'1vmax 0'} w={'100%'} justifyContent={'center'} alignItems={'center'}>
+                                <Button onClick={()=>navigate('/astrologersignup')} alignSelf={'center'} children={'Astrologer SignUp'} colorScheme={'blue'}  />
+                            </HStack>
                         </form>
                     </VStack>
                 </Stack>

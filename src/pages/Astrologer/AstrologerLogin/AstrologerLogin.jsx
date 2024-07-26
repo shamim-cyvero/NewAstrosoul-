@@ -1,30 +1,30 @@
-import { Box, Button, Checkbox, FormControl, FormLabel, Heading, HStack, Image, Input,Stack, Text, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import pic from '../../../assets/signUpImg.png'
+import { Box, Button, Checkbox, FormControl, FormLabel, Heading, HStack, Image, Input,Stack, Text, VStack } from '@chakra-ui/react'
 import {Link, useNavigate} from 'react-router-dom'
- 
+import pic from '../../../assets/signUpImg.png'
 
-const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
 
-  const navigate=useNavigate()
-
-  const formSubmit = (e) => {
-    e.preventDefault()
-    console.log(email)
-    console.log(password)
-}
+const AstrologerLogin = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+  
+    const navigate=useNavigate()
+  
+    const formSubmit = (e) => {
+      e.preventDefault()
+      console.log(email)
+      console.log(password)
+  }
   return (
-   <>
-    <Stack w={'90%'} m={'40px auto'}  alignItems={'center'} justifyContent={'center'} direction={{base:'column',md:'column',lg:'row'}}>
+    <>
+          <Stack w={'90%'} m={'40px auto'}  alignItems={'center'} justifyContent={'center'} direction={{base:'column',md:'column',lg:'row'}}>
                 <Stack w={'100%'} alignItems={'center'} justifyContent={'center'} direction={{base:'column',md:'column',lg:'row'}}>
                     <Box w={{base:'100%',md:'100%',lg:'50%'}} >
                         <Image src={pic} alt='pic' w={'100%'} />
                     </Box>
 
                     <VStack  w={{base:'100%',md:'100%',lg:'50%'}}  spacing={3}>
-                        <Heading children={'Login in to your account'} fontSize={'2rem'} />
+                        <Heading children={' Astrologer Login '} fontSize={'2rem'} />
 
                         <form style={{ width: '90%' }} onSubmit={formSubmit}>
                             <FormControl id="email" mt={'5px'}>
@@ -42,17 +42,14 @@ const Login = () => {
                             </VStack>
 
                             <Text textAlign={'center'} mt={'15px'} fontWeight={'400'} fontSize={['1.2rem','1.1rem','.9rem']}>Forgot your password? </Text>
-                            <Text textAlign={'center'} mt={'15px'} fontWeight={'400'} fontSize={['1.2rem','1.1rem','.9rem']}> Don't have an account? <Link  to={'/signup'} color={'#1f3b64'} fontWeight={'700'} fontSize={['1.2rem','1.1rem','.9rem']}>SignUp</Link></Text>
-                            <HStack m={'1vmax 0'} w={'100%'} justifyContent={'center'} alignItems={'center'}>
-                                <Button onClick={()=>navigate('/astrologerlogin')} alignSelf={'center'} children={'Astrologer Login'} colorScheme={'blue'}  />
-                            </HStack>
+                            <Text textAlign={'center'} mt={'15px'} fontWeight={'400'} fontSize={['1.2rem','1.1rem','.9rem']}> Don't have an Astrologer account? <Link  to={'/astrologersignup'} color={'#1f3b64'} fontWeight={'700'} fontSize={['1.2rem','1.1rem','.9rem']}>SignUp</Link></Text>
                         </form>
                     </VStack>
                 </Stack>
 
             </Stack>
-   </>
+    </>
   )
 }
 
-export default Login
+export default AstrologerLogin

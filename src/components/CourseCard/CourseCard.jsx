@@ -29,7 +29,7 @@ const CourseCard = ({ offer, image, name, category, rating, totalRating, price, 
 
     return (
         <>
-            <HStack w={'100%'} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'}>
+            <HStack cursor={'pointer'} w={'100%'} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'}>
 
                 <Box w={'100%'} alignItems={'center'} justifyContent={'center'} p={'6px'} mt={'20px'} borderRadius={'10px'}>
 

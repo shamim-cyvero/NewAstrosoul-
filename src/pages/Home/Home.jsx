@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeSlider from "../../components/HomeSlider/HomeSlider";
 import MediaSlide from "../../components/MediaSlide/MediaSlide";
 import SimpleCard from "../../components/SimpleCard/SimpleCard";
@@ -12,8 +12,12 @@ import AstroProfile from "../../components/AstroProfile/AstroProfile";
 import AstroVedio from "../../components/AstroVedio/AstroVedio";
 import Blog from "../../components/Blog/Blog";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import { useDisclosure } from "@chakra-ui/react";
+import AlertModalForContact from "../../components/AlertModalForContact/AlertModalForContact";
 
 const Home = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure();
+
   const cousreCardData = [
     {
       img: course,
@@ -28,9 +32,24 @@ const Home = () => {
       title: "Personalized Reports",
     },
   ];
+  let timeout;
+// function myFunction() {
+//   timeout = setTimeout(alertFunc, 5000);
+// }
+// function alertFunc() {
+//   onOpen()
+// }
+window.onload =()=>{
+  timeout = setTimeout(()=>onOpen(), 5000);
+}
+
+// useEffect(()=>{
+//   myFunction()
+// },[])
   return (
     <>
       <HomeSlider />
+     <AlertModalForContact isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <SimpleCard cousreCardData={cousreCardData} />
       <HindiCourse />
       <EnglishCourse />

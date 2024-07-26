@@ -1,13 +1,18 @@
 import React from 'react'
 import Slider from 'react-slick';
-import astro1 from '../../assets/astrologerImg/astro1.jpg'
-import astro2 from '../../assets/astrologerImg/astro2.jpg'
-import astro3 from '../../assets/astrologerImg/astro3.jpg'
-import astro4 from '../../assets/astrologerImg/astro4.jpg'
-import astro5 from '../../assets/astrologerImg/astro5.jpg'
-import astro6 from '../../assets/astrologerImg/astro6.jpg'
-import astro7 from '../../assets/astrologerImg/astro7.jpg'
-import astro8 from '../../assets/astrologerImg/astro8.jpg'
+import astro1 from '../../assets/astrologerImg/astro1.png'
+import astro2 from '../../assets/astrologerImg/astro2.png'
+import astro3 from '../../assets/astrologerImg/astro3.png'
+import astro4 from '../../assets/astrologerImg/astro4.png'
+import astro5 from '../../assets/astrologerImg/astro5.png'
+import astro6 from '../../assets/astrologerImg/astro6.png'
+import astro7 from '../../assets/astrologerImg/astro7.png'
+import astro8 from '../../assets/astrologerImg/astro8.png'
+import astro9 from '../../assets/astrologerImg/astro9.png'
+import astro11 from '../../assets/astrologerImg/astro11.png'
+import astro12 from '../../assets/astrologerImg/astro12.png'
+import astro13 from '../../assets/astrologerImg/astro13.png'
+
 import { Avatar, Box, Button, Heading, HStack, Stack, Text, VStack } from '@chakra-ui/react';
 import Rating from 'react-rating';
 import { FaStar } from 'react-icons/fa6';
@@ -59,10 +64,10 @@ const AstroProfile = () => {
     const profileDetails = [
         {
             image: astro1,
-            astroName: 'Abhay Sharma',
-            exp: 'Astrology Hindi,English Exp: 5+ Year',
+            astroName: 'Astro Yash',
+            exp: 'Vedic, Numerology Exp: 3+ Year',
             rating: 'star',
-            totalRating: '4.5',
+            totalRating: '4.1',
             appointment: 'Book a Consultation'
         },
         {
@@ -75,16 +80,16 @@ const AstroProfile = () => {
         },
         {
             image: astro3,
-            astroName: 'Vishnu Dhanuka',
-            exp: 'Astrology Hindi,English Exp: 5+ Year',
+            astroName: 'Priya soull',
+            exp: 'Tarot Reading, Numerology, Hindi,English Exp: 3+ Year',
             rating: 'star',
-            totalRating: '4.5',
+            totalRating: '4',
             appointment: 'Book a Consultation'
         },
         {
             image: astro4,
-            astroName: 'Mani Aggarwal',
-            exp: 'Astrology Hindi,English Exp: 5+ Year',
+            astroName: 'Agastya',
+            exp: 'Career,Marriage,Relationship,Rarot Reading Hindi,English Exp: 5+ Year',
             rating: 'star',
             totalRating: '4.5',
             appointment: 'Book a Consultation'
@@ -99,24 +104,56 @@ const AstroProfile = () => {
         },
         {
             image: astro6,
-            astroName: 'Acharya Panduranga',
-            exp: 'Astrology Hindi,English Exp: 5+ Year',
+            astroName: 'Meenakshi',
+            exp: 'Relationship Hindi, Exp: 30+ Year',
             rating: 'star',
             totalRating: '4.5',
             appointment: 'Book a Consultation'
         },
         {
             image: astro7,
-            astroName: 'Revanthi Shridhar',
-            exp: 'Astrology Hindi,English Exp: 5+ Year',
+            astroName: 'Navneet sharma',
+            exp: 'Vedic Hindi, Exp: 3+ Year',
             rating: 'star',
-            totalRating: '4.5',
+            totalRating: '4.1',
             appointment: 'Book a Consultation'
         },
         {
             image: astro8,
-            astroName: 'Anubhav Gairola',
-            exp: 'Astrology Hindi,English Exp: 5+ Year',
+            astroName: 'Gaurav Ji',
+            exp: 'Psychologist,Vedic,Relationship Hindi,English Exp: 3+ Year',
+            rating: 'star',
+            totalRating: '4.3',
+            appointment: 'Book a Consultation'
+        },
+        {
+            image: astro9,
+            astroName: 'Govind Pathak',
+            exp: 'Vedic Hindi, Exp: 3+ Year',
+            rating: 'star',
+            totalRating: '4.3',
+            appointment: 'Book a Consultation'
+        },
+        {
+            image: astro11,
+            astroName: 'Acharya angad',
+            exp: 'Marriage, Pshychologist,Vedic Hindi, Exp: 5+ Year',
+            rating: 'star',
+            totalRating: '4.3',
+            appointment: 'Book a Consultation'
+        },
+        {
+            image: astro12,
+            astroName: 'Aditya Mehra',
+            exp: 'Chandigarh Hindi Exp: 2+ Year',
+            rating: 'star',
+            totalRating: '4.3',
+            appointment: 'Book a Consultation'
+        },
+        {
+            image: astro13,
+            astroName: 'Ajay Pandit',
+            exp: 'Vedic,Numerology Hindi,Punjabi Exp: 3+ Year',
             rating: 'star',
             totalRating: '4.3',
             appointment: 'Book a Consultation'
