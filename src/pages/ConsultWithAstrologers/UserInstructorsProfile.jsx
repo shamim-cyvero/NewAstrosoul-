@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
-import astro1 from "../../assets/astrologerImg/astro1.png";
-import astro2 from "../../assets/astrologerImg/astro2.png";
-import astro3 from "../../assets/astrologerImg/astro3.png";
-import astro4 from "../../assets/astrologerImg/astro4.png";
-import astro5 from "../../assets/astrologerImg/astro5.png";
-import astro6 from "../../assets/astrologerImg/astro6.png";
-import astro7 from "../../assets/astrologerImg/astro7.png";
-import astro8 from "../../assets/astrologerImg/astro8.png";
+import astro10 from "../../assets/astrologerImg/astro10.png";
+
 import { Avatar, AvatarBadge, Button, Heading, HStack, Stack, Text, VStack,Tab, TabList, TabPanel, TabPanels, Tabs, ListItem, List, ListIcon } from "@chakra-ui/react";
 import { MdCheckCircle } from 'react-icons/md';
 import Rating  from 'react-rating'
@@ -21,24 +15,25 @@ const UserInstructorsProfile = () => {
   
   
 
-  const singleProfile = {
-    image: astro1,
-    astroName: "Abhay Sharma",
-    Specialist:'Astrology | Vastu Specialist',
-    exp: "Astrology Hindi,English Exp: 5+ Year",
-    rating: "star",
-    totalRating: "4.5",
-    appointment: "Book a Consultation",
-  };
+  const singleProfile = 
+    {
+      image: astro10,
+      astroName: 'Mr.Rahull Verma',
+      exp: 'Vedic,Relationship,Numerology Hindi,English Exp: 6+ Year',
+      rating: 'star',
+    totalRating: '4.5',
+      appointment: 'Book a Consultation'    
+    }
+  
 
   return (
     <>
-        <Stack bgColor={'white'} borderRadius={'10px'} boxShadow='lg' spacing={'10'} border={'1px solid red'} w={'80%'} p={'6'} m={'1.5vmax auto'} alignItems={'center'} justifyContent={'flex-start'} direction={{base:'column',md:'row',lg:'row'}}>
-            <Avatar border={'1px solid red'} w={'15vmax'} h={'15vmax'} src={singleProfile.image} name={singleProfile.astroName} >
+        <Stack bgColor={'white'} borderRadius={'10px'} boxShadow='lg' spacing={'10'}  w={'80%'} p={'6'} m={'1.5vmax auto'} alignItems={'center'} justifyContent={'flex-start'} direction={{base:'column',md:'row',lg:'row'}}>
+            <Avatar  w={'15vmax'} h={'15vmax'} src={singleProfile.image} name={singleProfile.astroName} >
               {/* <AvatarBadge  bg='tomato' boxSize='.9em' /> */}
             </Avatar>
 
-            <VStack p={2} spacing={'1'} border={'1px solid red'} alignItems={'flex-start'} >
+            <VStack p={2} spacing={'1'} alignItems={'flex-start'} >
                 <Heading letterSpacing={'4px'}  fontSize={'3xl'} children={singleProfile.astroName} />
                 <Text children={singleProfile.Specialist} />
                 <HStack >
@@ -69,7 +64,7 @@ const UserInstructorsProfile = () => {
         <TabPanels >
 
           <TabPanel p={'4'}>
-            <VStack mb={'2vmax'} border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
+            <VStack mb={'2vmax'}  alignItems={'flex-start'} spacing={'0'} >
               <Heading m={'1vmax 0'} fontSize={'xl'} children={'Education'} />
               <List spacing={1}>
                 <ListItem>
@@ -87,7 +82,7 @@ const UserInstructorsProfile = () => {
               </List>
             </VStack>
 
-            <VStack mb={'2vmax'} border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
+            <VStack mb={'2vmax'} alignItems={'flex-start'} spacing={'0'} >
               <Heading m={'1vmax 0'} fontSize={'xl'} children={'Experiences'} />
               <List spacing={1}>
                 <ListItem>
@@ -97,7 +92,7 @@ const UserInstructorsProfile = () => {
               </List>
             </VStack>
 
-            <VStack border={'1px solid red'} alignItems={'flex-start'} spacing={'0'} >
+            <VStack alignItems={'flex-start'} spacing={'0'} >
               <Heading m={'1vmax 0'} fontSize={'xl'} children={'About'} />
               <Text children={`
                 Mr. Narendra Umrikar, a globally recognized Indian Vaastu Astrologer with 6+ years of expertise. 

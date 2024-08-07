@@ -136,26 +136,26 @@ const Header = () => {
                 </MenuButton>
                 <MenuList w={'50%'} >
                    <MenuItem>
-                    <HStack justifyContent={'space-evenly'} alignItems={'center'} >
+                    <HStack onClick={()=>navigate('/astrology')} justifyContent={'space-evenly'} alignItems={'center'} >
                         <Box  >
                             <Image w={'50%'} src={c1} alt="c1" />
                         </Box>
-                        <Text  children={'Astrology'} />
+                        <Text  children={'Astrology '} />
                      
                     </HStack>
                    </MenuItem>
 
                    <MenuItem>
-                    <HStack justifyContent={'space-evenly'} alignItems={'center'}>
+                    <HStack onClick={()=>navigate('/ayurveda')} justifyContent={'space-evenly'} alignItems={'center'}>
                         <Box >
                             <Image w={'50%'} src={c2} alt="c2" />
                         </Box>
-                        <Text children={'Ayurveda'} />
+                        <Text children={'Ayurveda '} />
                     </HStack>
                    </MenuItem>
 
                    <MenuItem>
-                    <HStack justifyContent={'space-evenly'} alignItems={'center'}>
+                    <HStack onClick={()=>navigate('/numerology')} justifyContent={'space-evenly'} alignItems={'center'}>
                         <Box >
                             <Image w={'50%'} src={c3} alt="c3" />
                         </Box>
@@ -165,7 +165,7 @@ const Header = () => {
                    </MenuItem>
 
                    <MenuItem>                  
-                    <HStack justifyContent={'space-evenly'} alignItems={'center'}>
+                    <HStack onClick={()=>navigate('/palmistry')} justifyContent={'space-evenly'} alignItems={'center'}>
                         <Box >
                             <Image w={'50%'} src={c4} alt="c4" />
                         </Box>
@@ -175,7 +175,7 @@ const Header = () => {
                    </MenuItem>
 
                    <MenuItem>                  
-                    <HStack justifyContent={'space-evenly'} alignItems={'center'}>
+                    <HStack onClick={()=>navigate('/vastu')} justifyContent={'space-evenly'} alignItems={'center'}>
                         <Box >
                             <Image w={'50%'} src={c5} alt="c5" />
                         </Box>

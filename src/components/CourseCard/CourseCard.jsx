@@ -8,7 +8,8 @@ import slide5 from '../../assets/HindiCourseImg//slide5.jpg'
 import slide6 from '../../assets/HindiCourseImg/slide6.jpg'
 import { FaStar } from "react-icons/fa6";
 import Rating from 'react-rating';
-const CourseCard = ({ offer, image, name, category, rating, totalRating, price, teacherImg, teacherName }) => {
+import { useNavigate } from 'react-router-dom';
+const CourseCard = ({ offer, image, name, category, rating, totalRating, price, teacherImg, teacherName,url }) => {
 
     // const courseDetails=
     //     {
@@ -25,11 +26,11 @@ const CourseCard = ({ offer, image, name, category, rating, totalRating, price, 
     //         }
     //     }
 
-
+ const navigate=useNavigate()
 
     return (
         <>
-            <HStack cursor={'pointer'} w={'100%'} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'}>
+            <HStack onClick={()=>navigate(url)} cursor={'pointer'} w={'100%'} alignItems={'center'} justifyContent={'center'}>
 
                 <Box w={'100%'} alignItems={'center'} justifyContent={'center'} p={'6px'} mt={'20px'} borderRadius={'10px'}>
 

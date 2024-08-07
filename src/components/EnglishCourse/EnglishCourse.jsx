@@ -116,7 +116,7 @@ const EnglishCourse = () => {
                 <Slider {...settings}>
                     {courseDetails && courseDetails.map((item) => (
 
-                        <CourseCard offer={item.offer} image={item.image} name={item.name} category={item.category} rating={item.rating} totalRating={item.totalRating} price={item.price} teacherName={item.teacher.name} teacherImg={item.teacher.avatar}/>
+                        <CourseCard url={'/course'} offer={item.offer} image={item.image} name={item.name} category={item.category} rating={item.rating} totalRating={item.totalRating} price={item.price} teacherName={item.teacher.name} teacherImg={item.teacher.avatar}/>
 
                     ))
                     }

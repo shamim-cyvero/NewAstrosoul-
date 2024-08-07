@@ -16,6 +16,12 @@ import UserAstrologersProfile from "./pages/ConsultWithAstrologers/UserAstrologe
 import UserInstructorsProfile from "./pages/ConsultWithAstrologers/UserInstructorsProfile";
 import AstrologerLogin from "./pages/Astrologer/AstrologerLogin/AstrologerLogin";
 import AstrologerSignup from "./pages/Astrologer/AstrologerSignUp/AstrologerSignup";
+import SingleCourse from "./pages/Course/SingleCourse";
+import Astrology from "./pages/Course/Category/Astrology";
+import Ayurveda from "./pages/Course/Category/Ayurveda";
+import Numerology from "./pages/Course/Category/Numerology";
+import Palmistry from "./pages/Course/Category/Palmistry";
+import Vastu from "./pages/Course/Category/Vastu";
 
 function App() {
   return (
@@ -23,7 +29,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path={"/"} element={<Home />} />
+          <Route path={"/"} element={<Home />} /> 
           <Route path={"contactus"} element={<ContactUs />} />
           <Route path={"blog"} element={<Blog />} />
           <Route path={"consult"} element={<ConsultWithAstrologers />} />
@@ -34,8 +40,16 @@ function App() {
           <Route path={"astrologerlogin"} element={<AstrologerLogin />} />
           <Route path={"astrologersignup"} element={<AstrologerSignup />} />
 
-          <Route path={"UserAstrologersProfile"} element={<UserAstrologersProfile />} />
-          <Route path={"UserInstructorsProfile"} element={<UserInstructorsProfile />} />
+          <Route path={"user/astrologers/profile"} element={<UserAstrologersProfile />} />
+          <Route path={"user/instructors/profile"} element={<UserInstructorsProfile />} />
+
+          <Route path={"course"} element={<SingleCourse />} />
+
+          <Route path={"astrology"} element={<Astrology />} />
+          <Route path={"ayurveda"} element={<Ayurveda />} />
+          <Route path={"numerology"} element={<Numerology />} />
+          <Route path={"palmistry"} element={<Palmistry />} />
+          <Route path={"vastu"} element={<Vastu />} />
         </Routes>
         <Footer />
       </BrowserRouter>

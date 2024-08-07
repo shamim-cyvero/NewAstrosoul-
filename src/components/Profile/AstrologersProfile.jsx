@@ -15,8 +15,10 @@ import astro13 from '../../assets/astrologerImg/astro13.png'
 import { Avatar, Box, Button, Heading, HStack, Text, VStack } from '@chakra-ui/react'
 import Rating from 'react-rating'
 import { FaStar } from 'react-icons/fa6'
+import { useNavigate } from 'react-router-dom'
 
 const AstrologersProfile = () => {
+    const navigate=useNavigate()
  
     const profileDetails = [
         {
@@ -124,7 +126,7 @@ const AstrologersProfile = () => {
 
 {
   profileDetails && profileDetails.map((item) => (
-      <Box key={item.astroName} w={'300px'} m={'20px auto'} p={'10px'} mt={'20px'} borderRadius={'10px'} >
+      <Box cursor={'pointer'} onClick={()=>navigate('/user/astrologers/profile')} key={item.astroName} w={'300px'} m={'20px auto'} p={'10px'} mt={'20px'} borderRadius={'10px'} >
           <VStack w={'98%'} h={'250px'} alignItems={'center'} justifyContent={'center'} spacing={2} p={'6px 0px'} boxShadow='lg' rounded='md' bg='white'>
               <Avatar name='Dan Abrahmov' src={item.image} size={'lg'} />
               <Heading children={item.astroName} color={'#1f3b64'} fontSize={'1.1rem'} mb={'10px'} textAlign={'center'} />
